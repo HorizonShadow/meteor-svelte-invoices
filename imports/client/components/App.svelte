@@ -1,12 +1,12 @@
 <script>
-  import { Router, Route } from 'svero'
+  import { Router, Route } from 'svelte-routing'
   import Home from './Home.svelte'
+  import Index from './Index.svelte';
+  import Nav from './Nav.svelte';
 </script>
 
-<nav>
-  <a href="/">Home</a>
-</nav>
-
-<Router>
-  <Route path="/" component={Home} />
+<Router url="">
+  <Nav />
+  <Route path="/" component={Index} />
+  <Route path="/home" component={Home} />
 </Router>
